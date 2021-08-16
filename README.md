@@ -30,10 +30,25 @@
 1. **First Principle:** The state of your whole application is stored in an object tree within a **single store.**
     - Maintain our application state in a single object which would be managed by the Redux store.
 3. **Second Principle:** The only way to change the state is to emit or **dispatch an action**, an object describing what happened. Means:-
-- If you want to update the state of your app, you need to let Redux know about that with an action. 
-- Not allowed to directly update the state object.
+    - If you want to update the state of your app, you need to let Redux know about that with an action. 
+    - Not allowed to directly update the state object.
 4. **Thrid Principle:** To specify how the state tree is transformed by actions, you write pure **reducers**.
 - Reducer:- `(previousState, action) => newState`
+
+### Some Important things to be notted
+- Redux Ation
+   - The only way your application can interact with the state
+   - Carry some information from your app to the redux store
+   - Plain JS objects
+   - Have a 'type' property that indicates the type of action being peformed
+   - The 'type' property is typically defined as string constants
+- Redux Store
+   - One store for teh entire application
+   - Holds application state
+   - Allows access to state via getState()
+   - Allow state to be updated via dispatch(action)
+   - Registers listeners via subscribe(listener)
+   - Handles unregistering of listeners via the function returned by subscribe(listener)
 
 ## Middleware:
 - It is the suggested way to extend redux with custom functionality.
