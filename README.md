@@ -27,12 +27,12 @@
  3. **Reducer**: A reducer which actually carries out the state **transition** **depending** on the **action**. It **ties** the store and actions together.
 
 ### With that there are three Principles:
- 1. **First Principle:** The state of your whole application is stored in an object tree within a **single store.**
- - Maintain our application state in a single object which would be managed by the Redux store.
-2. **Second Principle:** The only way to change the state is to emit or **dispatch an action**, an object describing what happened. Means:-
+1. **First Principle:** The state of your whole application is stored in an object tree within a **single store.**
+    - Maintain our application state in a single object which would be managed by the Redux store.
+3. **Second Principle:** The only way to change the state is to emit or **dispatch an action**, an object describing what happened. Means:-
 - If you want to update the state of your app, you need to let Redux know about that with an action. 
 - Not allowed to directly update the state object.
-3. **Thrid Principle:** To specify how the state tree is transformed by actions, you write pure **reducers**.
+4. **Thrid Principle:** To specify how the state tree is transformed by actions, you write pure **reducers**.
 - Reducer:- `(previousState, action) => newState`
 
 ## Middleware:
